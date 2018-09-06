@@ -1,0 +1,26 @@
+<div class="container">
+  <header class="header">
+    <img src="../assets/logo.png" alt="git Explorer logo" class="logo">
+
+    <form action="#" class="search">
+      <input type="text" class="search__input" name="searchText"
+       placeholder="Search Github Users" [(ngModel)]="searchString">
+      <button class="search__button" (click)="searchUser($event)">
+        <svg class="search__icon">
+          <use xlink:href="../assets/svg/sprite.svg#icon-magnifying-glass"></use>
+        </svg>
+      </button>
+    </form>
+      <nav class="user-nav">
+      </nav>
+   </header>
+
+   <section class="content">
+     <div class="profile__list">
+      <app-profile-list [profiles]="userProfiles"></app-profile-list>
+     </div>
+     <div class="profile__detail">
+
+     </div>
+   </section>
+  </div>
