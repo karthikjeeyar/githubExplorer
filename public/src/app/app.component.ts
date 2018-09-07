@@ -6,19 +6,10 @@ import { ProfileService } from './services/profile.service';
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
-  title = "public";
   searchString = "";
   selectedProfile: any;
-  userProfiles = [
-    {
-      login: "karthik",
-      avatar_url: "https://avatars3.githubusercontent.com/u/9964343?v=4"
-    },
-    {
-      login: "sreeram",
-      avatar_url: "https://avatars3.githubusercontent.com/u/9964343?v=4"
-    }
-  ];
+  loaded: boolean = false;
+  userProfiles = [];
 
   constructor(private profileService: ProfileService) {}
 
@@ -28,20 +19,27 @@ export class AppComponent implements OnInit {
       this.profileService.getPopularUsers(this.searchString).subscribe(res => {
         this.userProfiles = res.items;
         this.searchString = "";
+        this.loaded = true;
       });
     }
   }
 
+  resetContent() {
+    this.userProfiles = [];
+    this.searchString = '';
+    this.selectedProfile = null;
+    this.loaded = false;
+  }
+
   ngOnInit() {
-    this.profileService.profileSelected.subscribe(
-      (profile) => {
-        this.selectedProfile = profile;
-        this.profileService.getUserRepositories(profile.login)
-          .subscribe((repos) => {
-            this.selectedProfile.repos = repos;
-            console.log('Selected', this.selectedProfile)
-        })
-      }
-    )
+    this.profileService.profileSelected.subscribe(profile => {
+      this.selectedProfile = profile;
+      this.loaded = true;
+      this.profileService
+        .getUserRepositories(profile.login)
+        .subscribe(repos => {
+          this.selectedProfile.repos = repos;
+        });
+    });
   }
 }

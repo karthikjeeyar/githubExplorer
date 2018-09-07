@@ -1,27 +1,33 @@
 <div class="container">
-  <header class="header">
-    <div class="logo__box">
-      <img src="../assets/logo.png" alt="git Explorer logo" class="logo">
-      <span class="logo__title"> Git Explorer</span>
-    </div>
+  <div class="main-content">
+    <header class="header">
+      <div class="logo__box" (click)="resetContent()">
+        <img src="../assets/logo.png" alt="git Explorer logo" class="logo">
+        <span class="logo__title"> Git Explorer</span>
+      </div>
 
-    <form action="#" class="search">
-      <input type="text" class="search__input" name="searchText"
-       placeholder="Search Github Users" [(ngModel)]="searchString">
-      <button class="search__button" (click)="searchUser($event)">
-        <svg class="search__icon">
-          <use xlink:href="../assets/svg/sprite.svg#icon-magnifying-glass"></use>
-        </svg>
-      </button>
-    </form>
-   </header>
-
-   <section class="content">
-     <div class="profile__list">
-      <app-profile-list [profiles]="userProfiles" [currentProfile]="selectedProfile"></app-profile-list>
-     </div>
-     <div class="profile__detail">
-      <app-profile-detail [profile]="selectedProfile"></app-profile-detail>
-     </div>
-   </section>
+      <form action="#" class="search">
+        <input type="text" class="search__input" name="searchText" placeholder="Search Github Users" [(ngModel)]="searchString">
+        <button class="search__button" (click)="searchUser($event)">
+          <svg class="search__icon">
+            <use xlink:href="../assets/svg/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </form>
+    </header>
+    <section class="content">
+      <div class="home__tour" *ngIf="!loaded">
+        <div> Welcome to Git Explorer! </div>
+        <div class="hint">
+          Type a github user name in the searchbar to explore more...
+        </div>
+      </div>
+      <div class="profile__list" *ngIf="userProfiles.length">
+        <app-profile-list [profiles]="userProfiles" [currentProfile]="selectedProfile"></app-profile-list>
+      </div>
+      <div class="profile__detail" *ngIf="selectedProfile">
+        <app-profile-detail [profile]="selectedProfile"></app-profile-detail>
+      </div>
+    </section>
+  </div>
   </div>

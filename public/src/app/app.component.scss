@@ -1,7 +1,7 @@
     $color-primary: #1f2c38;
     $color-primary-light: #364553;
     $color-secondary: #008080;
-    :root {
+     :root {
         --color-grey-light-1: #faf9f9;
         --color-grey-light-2: #f4f2f2;
         --color-grey-light-3: #f0eeee;
@@ -82,31 +82,50 @@
 
     .content {
         display: flex;
-        // background: url('../assets/bg.png');
-        // background-size: cover;
         min-height: calc(100vh - 7rem);
         font-size: 2rem;
         color: #C0C0C0;
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-small) {
             flex-direction: column;
         }
         &>* {
             display: flex;
+            flex-direction: column;
             &.profile__list {
-                // background: red;
                 width: 20%;
-                @media only screen and (max-width: $bp-medium) {
+                @media only screen and (max-width: $bp-smallest) {
                     width: 100%;
-                    height: 15rem;
+                    height: 16rem;
                     overflow: scroll;
+                    border-bottom: 1px solid grey;
                 }
             }
             &.profile__detail {
                 padding: 1rem;
                 width: 80%;
-                @media only screen and (max-width: $bp-medium) {
-                    margin: 0;
+                @media only screen and (max-width: $bp-smallest) {
                     width: 95%;
+                    grid-row-gap: 1rem;
+                }
+            }
+        }
+        &>.user__profile {
+            display: flex;
+        }
+        &>.home__tour {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            @media only screen and (max-width: $bp-medium) {
+                margin: auto;
+            }
+            &>.hint {
+                font-size: 1.6rem;
+                font-style: italic;
+                @media only screen and (max-width: $bp-medium) {
+                    padding: 3rem;
                 }
             }
         }
