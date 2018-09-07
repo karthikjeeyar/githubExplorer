@@ -18,10 +18,15 @@ node v.8.0.0 or greater version
 
 To install the project, please follow the steps described below.
 
-For starters, please run the following command to install the dependancies 
+```
+git clone https://github.com/karthikjeeyar/githubExplorer.git
+```
+After cloning, cd into the newly created folder and duplicate the `.env.example` file, save it as `.env` and replace dummy values with the correct values. 
+
+ For starters, please run the following command to install the dependancies 
 
 ```
-npm run setup or yarn setup
+`npm run setup` or `yarn setup`
 ```
 
 Once the dependancies are installed properly, then go ahead and run the next command
