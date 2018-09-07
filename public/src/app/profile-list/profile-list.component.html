@@ -1,3 +1,14 @@
-<ul>
-  <li *ngFor="let profile of profiles">{{profile.login}}</li>
+<ul class="profile__list" >
+  <li *ngFor="let profile of profiles" (click)="profileSelected(profile)"
+  [class.active]="currentProfile && profile.login == currentProfile.login"
+  >
+    <div class="profile__box">
+      <div class="profile__image">
+        <img src={{profile.avatar_url}} alt="">
+      </div>
+      <div class="profile_info">
+         {{profile.login}}
+      </div>
+    </div>
+  </li>
 </ul>

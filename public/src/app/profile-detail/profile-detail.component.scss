@@ -1,0 +1,58 @@
+.profile {
+    width: 100%;
+    &__header {
+        padding: 2rem;
+        display: flex;
+        border-bottom: 1px solid grey;
+    }
+    &__insights {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 1rem;
+        &>.label {
+            display: flex;
+            padding: .5rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: silver;
+            color: #212e3b;
+        }
+    }
+    &>a,
+     :visited,
+     :link {
+        color: grey;
+        text-decoration: none;
+    }
+    &__image {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 1rem;
+    }
+    &__bio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.repository {
+    &__box {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #084c4c;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        justify-content: space-between;
+        transition: all .2s;
+        &:hover {
+            background: #008080;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    &__details {}
+}

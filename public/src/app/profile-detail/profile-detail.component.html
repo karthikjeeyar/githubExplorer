@@ -1,3 +1,65 @@
-<p>
-  profile-detail works!
-</p>
+<section *ngIf="profile" class="profile">
+    <div class="profile__header">
+      <img src="{{profile.avatar_url}}" class="profile__image" alt="Profile Image">
+      <div class="profile__bio">
+          <div class="profile__name">
+            {{profile.name}}
+            <small>({{profile.login}})<span *ngIf="profile.company">,</span></small>
+          </div>
+          <span *ngIf="profile.company"> Works at {{profile.company}}</span>
+          {{profile.location}}
+      </div>
+    </div>
+    <div class="profile__body">
+      <ul class="list-group">
+        <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+        <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
+        <li class="list-group-item" *ngIf="profile.blog">
+          <a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a>
+        </li>
+        <li class="list-group-item" *ngIf="profile.email">
+          <a href="emailto:{{profile.email}}">{{profile.email}}</a>
+        </li>
+      </ul>
+      <div>
+        <div class="profile__insights">
+          <div class="label">
+             <span>Followers</span>
+             <span>{{profile.followers}}</span>
+          </div>
+          <div class="label">
+             <span>Following</span>
+             <span>{{profile.following}}</span>
+          </div>
+          <div class="label">
+             <span>Public gists</span>
+             <span>{{profile.public_gists}}</span>
+          </div>
+          <div class="label">
+             <span>Public Repos</span>
+             <span>{{profile.public_repos}}</span>
+          </div>
+        </div>
+        <p>
+          <a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a>
+        </p>
+        <h3 class="panel-title">Repos</h3>
+        <div class="loader" *ngIf="!profile.repos">
+          Loading...
+        </div>
+        <div class="repositories"  *ngIf="profile.repos">
+            <div class="" *ngFor="let repo of profile.repos">
+              <a href="{{repo.html_url}}" target="_blank" class="repository__link">
+                <div class="repository__box">
+                   <div class="respository__details">
+                      <div class="repository__name"> {{repo.name}} </div>
+                      <p class="repository__description">{{repo.description}}</p>
+                   </div>
+                   <div> View this project on github</div>
+                </div>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+</section>
