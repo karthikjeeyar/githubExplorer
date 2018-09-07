@@ -4,8 +4,8 @@
   "description": "Github Explorer is git user search feature, built on angular 6 and nodeJs.",
   "main": "server.js",
   "scripts": {
-    "setup": "npm install && cd public && npm install && npm start",
-    "start": "node ./bin/www"
+    "setup": "npm install && cd public && npm install",
+    "start": "cd public && npm start"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/karthikjeeyar/githubExplorer#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "http-errors": "^1.7.0",
     "morgan": "^1.9.0",
