@@ -47,25 +47,40 @@
     }
 }
 
-.github__link {
-    @media only screen and (max-width: 500px) {
-        display: none;
+.github__link {}
+
+.github__icons {
+    display: flex;
+    &>* {
+        &>svg {
+            fill: #008080;
+        }
+        margin: 5px;
     }
 }
 
 .repository {
     &__box {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 15%;
         border: 1px solid #084c4c;
         padding: 1rem;
         margin-bottom: 1rem;
         justify-content: space-between;
         transition: all .2s;
+        @media only screen and (max-width: 500px) {
+          grid-template-columns: 1fr;
+        }
         &:hover {
             background: #008080;
             color: #fff;
             cursor: pointer;
+            &>.github__icons>*>svg {
+                fill: black;
+            }
+            &>.github__icons {
+                color: black;
+            }
         }
     }
     &__details {}
