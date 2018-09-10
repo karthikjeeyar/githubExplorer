@@ -1,0 +1,47 @@
+{
+    "total_count": 2,
+    "incomplete_results": false,
+    "items": [{
+            "login": "karthikjeeyar",
+            "id": 9964343,
+            "node_id": "MDQ6VXNlcjk5NjQzNDM=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/9964343?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/karthikjeeyar",
+            "html_url": "https://github.com/karthikjeeyar",
+            "followers_url": "https://api.github.com/users/karthikjeeyar/followers",
+            "following_url": "https://api.github.com/users/karthikjeeyar/following{/other_user}",
+            "gists_url": "https://api.github.com/users/karthikjeeyar/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/karthikjeeyar/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/karthikjeeyar/subscriptions",
+            "organizations_url": "https://api.github.com/users/karthikjeeyar/orgs",
+            "repos_url": "https://api.github.com/users/karthikjeeyar/repos",
+            "events_url": "https://api.github.com/users/karthikjeeyar/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/karthikjeeyar/received_events",
+            "type": "User",
+            "site_admin": false,
+            "score": 35.259212
+        },
+        {
+            "login": "karthikjeevakumar",
+            "id": 2737335,
+            "node_id": "MDQ6VXNlcjI3MzczMzU=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/2737335?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/karthikjeevakumar",
+            "html_url": "https://github.com/karthikjeevakumar",
+            "followers_url": "https://api.github.com/users/karthikjeevakumar/followers",
+            "following_url": "https://api.github.com/users/karthikjeevakumar/following{/other_user}",
+            "gists_url": "https://api.github.com/users/karthikjeevakumar/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/karthikjeevakumar/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/karthikjeevakumar/subscriptions",
+            "organizations_url": "https://api.github.com/users/karthikjeevakumar/orgs",
+            "repos_url": "https://api.github.com/users/karthikjeevakumar/repos",
+            "events_url": "https://api.github.com/users/karthikjeevakumar/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/karthikjeevakumar/received_events",
+            "type": "User",
+            "site_admin": false,
+            "score": 18.051537
+        }
+    ]
+}

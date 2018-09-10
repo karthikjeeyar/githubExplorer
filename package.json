@@ -1,32 +1,35 @@
 {
-  "name": "githubexplorer",
-  "version": "1.0.0",
-  "description": "Github Explorer is git user search feature, built on angular 6 and nodeJs.",
-  "main": "server.js",
-  "scripts": {
-    "setup": "npm install && cd public && npm install",
-    "start": "cd public && npm start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/karthikjeeyar/githubExplorer.git"
-  },
-  "author": "Karthik Jeeyar",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/karthikjeeyar/githubExplorer/issues"
-  },
-  "homepage": "https://github.com/karthikjeeyar/githubExplorer#readme",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "body-parser": "^1.18.3",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
-    "http-errors": "^1.7.0",
-    "morgan": "^1.9.0",
-    "serve-favicon": "^2.5.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.18.4"
-  }
+    "name": "githubexplorer",
+    "version": "1.0.0",
+    "description": "Github Explorer is git user search feature, built on angular 6 and nodeJs.",
+    "main": "server.js",
+    "scripts": {
+        "setup": "npm install && cd public && npm install",
+        "start": "cd public && npm start",
+        "test": "jest tests",
+        "coverage": "jest --collectCoverageFrom=src/**.js --coverage src"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/karthikjeeyar/githubExplorer.git"
+    },
+    "author": "Karthik Jeeyar",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/karthikjeeyar/githubExplorer/issues"
+    },
+    "homepage": "https://github.com/karthikjeeyar/githubExplorer#readme",
+    "dependencies": {
+        "axios": "^0.18.0",
+        "body-parser": "^1.18.3",
+        "dotenv": "^6.0.0",
+        "express": "^4.16.3",
+        "http-errors": "^1.7.0",
+        "morgan": "^1.9.0",
+        "serve-favicon": "^2.5.0"
+    },
+    "devDependencies": {
+        "jest": "^23.5.0",
+        "nodemon": "^1.18.4"
+    }
 }
