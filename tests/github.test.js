@@ -1,5 +1,5 @@
 const mockAxios = require('./__mocks__/axios');
-const github = require("../models/github");
+const github = require("../src/models/github");
 const userMockData = require('./__mockData__/userDetail.json');
 const usersMockData = require('./__mockData__/usersDetail.json');
 
