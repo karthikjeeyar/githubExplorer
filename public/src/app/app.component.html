@@ -25,6 +25,8 @@
       <div class="profile__list" *ngIf="userProfiles.length">
         <app-profile-list [profiles]="userProfiles" [currentProfile]="selectedProfile"></app-profile-list>
       </div>
+      <div *ngIf="!userProfiles.length && loaded">No results found</div>
+
       <div class="profile__detail" *ngIf="selectedProfile">
         <app-profile-detail [profile]="selectedProfile"></app-profile-detail>
       </div>
