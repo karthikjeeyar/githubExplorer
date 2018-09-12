@@ -43,7 +43,11 @@ Listening on port 3000
 
 ## Running the tests
 
-Yet to add
+Run the following command to test
+
+```
+yarn test
+```
 
 ## Deployment
 
