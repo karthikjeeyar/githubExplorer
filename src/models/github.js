@@ -2,7 +2,7 @@ const axios = require("axios");
 const config = require('dotenv').config()
 const clientId = process.env.GITHUB_CLIENT_ID;
 const clientSecret = process.env.GITHUB_CLIENT_SECRET;
-
+console.log(`https://api.github.com/users/karthik?client_id=${clientId}&client_secret=${clientSecret}`)
 const getUserInfo = user => axios.get(`https://api.github.com/users/${user}?client_id=${clientId}&client_secret=${clientSecret}`)
     .then(res => res.data);
 
