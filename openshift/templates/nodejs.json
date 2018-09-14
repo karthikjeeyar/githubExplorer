@@ -146,7 +146,7 @@
                         "imageChangeParams": {
                             "automatic": true,
                             "containerNames": [
-                                "nodejs-example"
+                                "github-explorer"
                             ],
                             "from": {
                                 "kind": "ImageStreamTag",
@@ -171,7 +171,7 @@
                     },
                     "spec": {
                         "containers": [{
-                            "name": "nodejs-example",
+                            "name": "github-explorer",
                             "image": " ",
                             "ports": [{
                                 "containerPort": 8080
@@ -209,7 +209,7 @@
             "displayName": "Name",
             "description": "The name assigned to all of the frontend objects defined in this template.",
             "required": true,
-            "value": "nodejs-example"
+            "value": "github-explorer"
         },
         {
             "name": "NAMESPACE",
