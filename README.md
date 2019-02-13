@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-node v.8.0.0 or greater version
+node v.8.9.0 or greater version
 ```
 
 ### Installing
@@ -21,18 +21,18 @@ To install the project, please follow the steps described below.
 ```
 git clone https://github.com/karthikjeeyar/githubExplorer.git
 ```
-After cloning, cd into the newly created folder and duplicate the `.env.example` file, save it as `.env` and replace dummy values with the correct values. 
+After cloning, cd into the newly created folder and duplicate the `.env.example` file, save it as `.env` and replace dummy values with the correct values.
 
- For starters, please run the following command to install the dependancies 
-
-```
-`npm run setup` or `yarn setup`
-```
-
-Once the dependancies are installed properly, then go ahead and run the next command
+ For starters, please run the following command to install the dependancies
 
 ```
-npm start or yarn start
+yarn setup
+```
+
+ Returning users can run the following command
+
+```
+yarn start
 ```
 
 On successful installation, you should see the following log in your console
@@ -61,4 +61,4 @@ Add additional notes about how to deploy this on a live system
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
