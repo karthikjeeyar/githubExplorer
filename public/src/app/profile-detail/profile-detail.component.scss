@@ -68,6 +68,7 @@
         margin-bottom: 1rem;
         justify-content: space-between;
         transition: all .2s;
+        background: silver;
         @media only screen and (max-width: 500px) {
           grid-template-columns: 1fr;
         }
