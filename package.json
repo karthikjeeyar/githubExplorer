@@ -5,7 +5,7 @@
     "main": "server.js",
     "scripts": {
         "setup": "npm install && cd public && npm install",
-        "build": "npm install && cd public && npm install",
+        "build": "npm install && cd public && npm install && cd ..",
         "start": "cd public && npm start",
         "test": "jest tests",
         "watch": "jest --watchAll",
