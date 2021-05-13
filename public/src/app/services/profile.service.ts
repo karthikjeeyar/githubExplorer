@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import { map } from   'rxjs/operators';
-import { EventEmitter } from '@angular/core';
-import { environment } from '../../environments/environment.prod'
+import { Injectable } from "@angular/core";
+import { Http, Headers } from "@angular/http";
+import { map } from "rxjs/operators";
+import { EventEmitter } from "@angular/core";
+import { environment } from "../../environments/environment.prod";
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class ProfileService {
   private searchString: string;
@@ -18,16 +18,16 @@ export class ProfileService {
   getUserProfileInfo(name) {
     return this.http
       .get(`${this.apiUrl}/users/${name}`)
-      .pipe(map(res => res.json()));
+      .pipe(map((res) => res.json()));
   }
   getPopularUsers(name) {
     return this.http
-      .get(`${this.apiUrl}/users?q=${name}`)
-      .pipe(map(res => res.json()));
+      .get(`${this.apiUrl}/search/users?q=${name}`)
+      .pipe(map((res) => res.json()));
   }
   getUserRepositories(name) {
     return this.http
       .get(`${this.apiUrl}/users/${name}/repos`)
-      .pipe(map(res => res.json()));
+      .pipe(map((res) => res.json()));
   }
 }
